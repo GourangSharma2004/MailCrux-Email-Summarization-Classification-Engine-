@@ -1,0 +1,138 @@
+.settings-dialog .MuiDialog-paper {
+  max-height: 80vh;
+}
+
+.settings-dialog-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.settings-dialog-content {
+  padding: 0 !important;
+}
+
+.settings-container {
+  display: flex;
+  height: 100%;
+}
+
+.settings-tabs {
+  min-width: 200px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.settings-tabs .MuiTab-root {
+  min-width: 200px;
+  min-height: 64px;
+  padding: 12px 16px;
+  text-align: left;
+  justify-content: flex-start;
+  text-transform: none;
+  font-weight: 400;
+  transition: background-color 0.2s;
+}
+
+.settings-tabs .MuiTab-root .MuiTab-wrapper {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.settings-tabs .MuiTab-root .MuiTab-wrapper > *:first-child {
+  margin-bottom: 0;
+  margin-right: 16px;
+}
+
+.settings-tabs .Mui-selected {
+  background-color: #f5f5f5;
+  color: #1A73E8;
+}
+
+.settings-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.settings-tab-content {
+  margin-bottom: 24px;
+}
+
+.settings-section-title {
+  margin-bottom: 16px !important;
+}
+
+.settings-section {
+  margin: 24px 0;
+}
+
+.settings-description {
+  color: #5f6368;
+  margin-top: 4px !important;
+  margin-left: 31px; /* Aligns with the label text */
+}
+
+.settings-select {
+  min-width: 200px;
+  margin-top: 8px;
+}
+
+.settings-time-field {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 24px;
+  margin-top: 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.settings-actions button {
+  margin-left: 12px;
+}
+
+/* Theme toggle styles */
+.theme-option-container {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.theme-preview-icon {
+  margin-left: 16px;
+}
+
+/* Dark mode overrides for settings dialog */
+[data-theme='dark'] .settings-dialog .MuiDialog-paper {
+  background-color: var(--background-paper);
+  color: var(--text-primary);
+}
+
+[data-theme='dark'] .settings-dialog-title {
+  border-bottom: 1px solid var(--divider);
+}
+
+[data-theme='dark'] .settings-tabs {
+  border-right: 1px solid var(--divider);
+}
+
+[data-theme='dark'] .settings-tabs .Mui-selected {
+  background-color: rgba(66, 133, 244, 0.15);
+}
+
+[data-theme='dark'] .settings-section-title {
+  color: var(--text-primary);
+}
+
+[data-theme='dark'] .settings-description {
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .settings-actions {
+  border-top: 1px solid var(--divider);
+} 

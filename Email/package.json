@@ -1,0 +1,27 @@
+{
+  "name": "smart-email-manager",
+  "version": "1.0.0",
+  "description": "An email management application with NLP-based filtering and summarization",
+  "scripts": {
+    "start": "node server/index.js",
+    "client": "cd client && PORT=3001 npm start",
+    "server": "nodemon server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd client && npm install"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^8.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "googleapis": "^120.0.0",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.1",
+    "natural": "^6.5.0",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.4",
+    "nodemon": "^3.0.1",
+    "openai": "^4.95.1"
+  }
+}

@@ -1,0 +1,85 @@
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-paper);
+    box-shadow: var(--shadow-light);
+    padding: 8px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 64px;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+}
+
+.header__left > img {
+    object-fit: contain;
+    height: 40px;
+    margin-left: 5px;
+}
+
+.header__middle {
+    display: flex;
+    flex: 0.7;
+    align-items: center;
+    background-color: var(--background-light);
+    padding: 10px;
+    border-radius: 8px;
+    height: 45px;
+}
+
+.header__middle > .MuiSvgIcon-root {
+    color: var(--icon-color);
+    margin-right: 10px;
+}
+
+.header__middle > input {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 0.95rem;
+    background-color: transparent;
+    color: var(--text-primary);
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 130px;
+}
+
+.header__right .MuiSvgIcon-root,
+.header__left .MuiSvgIcon-root {
+    color: var(--icon-color);
+}
+
+.MuiIconButton-root {
+    padding: 8px !important;
+    margin: 0 4px !important;
+}
+
+.header__right .MuiIconButton-root:hover {
+    background-color: var(--hover-background) !important;
+}
+
+.MuiBadge-badge {
+    background-color: var(--error-color) !important;
+    color: white !important;
+}
+
+@media (max-width: 768px) {
+    .header__middle {
+        flex: 0.6;
+    }
+    
+    .header__left > img {
+        height: 40px;
+    }
+}

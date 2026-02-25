@@ -1,0 +1,253 @@
+.login {
+    background-color: #f2f2f2;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-container > img {
+    object-fit: contain;
+    height: 200px;
+    background: transparent;
+    margin-bottom: 40px;
+}
+
+.login.dark-mode {
+    background-image: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.theme-toggle button {
+    color: #5f6368;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.login.dark-mode .theme-toggle button {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.login-paper {
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease;
+}
+
+.login-paper.dark-mode {
+    background-color: #16213e !important;
+    color: #fff !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+}
+
+.login-title {
+    margin-bottom: 16px !important;
+    color: #1a73e8;
+    font-weight: 500 !important;
+}
+
+.dark-mode .login-title {
+    color: #4285f4 !important;
+}
+
+.login-description {
+    margin-bottom: 24px !important;
+    color: #5f6368;
+    line-height: 1.5 !important;
+}
+
+.dark-mode .login-description {
+    color: #bdc1c6 !important;
+}
+
+.login-form {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.dark-mode .MuiInputBase-root {
+    color: #e8eaed !important;
+}
+
+.dark-mode .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255, 255, 255, 0.23) !important;
+}
+
+.dark-mode .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.dark-mode .MuiFormLabel-root {
+    color: #bdc1c6 !important;
+}
+
+.login-error {
+    color: #d93025 !important;
+    text-align: left;
+    margin: 8px 0 !important;
+    padding: 8px 12px;
+    background-color: rgba(217, 48, 37, 0.1);
+    border-radius: 4px;
+    width: 100%;
+}
+
+.dark-mode .login-error {
+    background-color: rgba(217, 48, 37, 0.2);
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+.login-button {
+    margin: 0 !important;
+    padding: 10px 24px !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
+    font-size: 15px !important;
+}
+
+.login-divider {
+    width: 100%;
+    margin: 24px 0 !important;
+}
+
+.login-small-divider {
+    margin: 16px 0 !important;
+}
+
+.dark-mode .MuiDivider-root {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.quick-login-button {
+    padding: 8px 20px !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
+    font-size: 14px !important;
+    background-color: #1a73e8 !important;
+    color: white !important;
+    margin-bottom: 8px !important;
+}
+
+.dark-mode .quick-login-button {
+    background-color: #4285f4 !important;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0;
+    width: 100%;
+}
+
+.social-button {
+    flex: 0 0 auto;
+    font-weight: 500 !important;
+    text-transform: none !important;
+}
+
+.social-icon {
+    background-color: #f2f2f2 !important;
+    color: #444 !important;
+    transition: all 0.2s ease !important;
+}
+
+.dark-mode .social-icon {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    color: #e8eaed !important;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+}
+
+.social-icon.github:hover {
+    background-color: #24292e !important;
+    color: white !important;
+}
+
+.social-icon.twitter:hover {
+    background-color: #1da1f2 !important;
+    color: white !important;
+}
+
+.social-icon.linkedin:hover {
+    background-color: #0077b5 !important;
+    color: white !important;
+}
+
+.social-label {
+    color: #5f6368;
+    margin-top: 8px !important;
+}
+
+.dark-mode .social-label {
+    color: #bdc1c6 !important;
+}
+
+.google-button {
+    padding: 8px 20px !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
+    font-size: 14px !important;
+    background-color: #ea4335 !important;
+    color: white !important;
+}
+
+.remember-me {
+    margin-top: 8px !important;
+    align-self: flex-start;
+}
+
+.dark-mode .MuiFormControlLabel-label {
+    color: #e8eaed !important;
+}
+
+.login-footer {
+    margin-top: 16px !important;
+    color: #80868b;
+}
+
+.dark-mode .login-footer {
+    color: #9aa0a6 !important;
+}
+
+@media (max-width: 600px) {
+    .login-paper {
+        padding: 24px;
+        width: 95%;
+    }
+    
+    .login-container > img {
+        height: 100px;
+    }
+    
+    .social-buttons {
+        flex-wrap: wrap;
+    }
+}

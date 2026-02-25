@@ -1,0 +1,189 @@
+.sidebar {
+    flex: 0.3;
+    max-width: 300px;
+    padding-right: 20px;
+    border-right: 1px solid #f1f3f4;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    position: relative;
+    z-index: 100;
+}
+
+.sidebar__compose {
+    margin-top: 15px !important;
+    margin-left: 10px !important;
+    margin-bottom: 20px !important;
+    text-transform: none !important;
+    color: #1a73e8 !important;
+    font-weight: 500 !important;
+    padding: 12px 24px !important;
+    border-radius: 28px !important;
+    box-shadow: 0 1px 3px rgba(60, 64, 67, 0.15), 0 1px 2px rgba(60, 64, 67, 0.2) !important;
+    background: linear-gradient(to right, #fff, #f8f9fa) !important;
+    transition: all 0.2s ease !important;
+    letter-spacing: 0.25px !important;
+    min-height: 48px !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.sidebar__compose::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #1a73e8, #4285f4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    border-radius: 28px;
+}
+
+.sidebar__compose:hover {
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302), 0 4px 8px 3px rgba(60, 64, 67, 0.149) !important;
+    background: #f8f9fa !important;
+    transform: translateY(-1px) !important;
+}
+
+.sidebar__compose:active {
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3) !important;
+    transform: translateY(1px) !important;
+}
+
+.sidebar__compose .MuiSvgIcon-root {
+    color: #1a73e8 !important;
+    font-size: 20px !important;
+    transition: transform 0.2s ease !important;
+    margin-right: 8px !important;
+}
+
+.sidebar__compose:hover .MuiSvgIcon-root {
+    transform: rotate(10deg) !important;
+}
+
+.sidebar__footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    border-top: 1px solid #f1f3f4;
+    margin-top: 20px;
+    position: sticky;
+    bottom: 0;
+    background-color: inherit;
+}
+
+.sidebar-footerIcons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.sidebar-footerIcons .MuiIconButton-root {
+    color: #5f6368;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-footerIcons .MuiIconButton-root:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.sidebar-more-button {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-more-button:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Custom scrollbar for sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        flex: 0.2;
+        min-width: 80px;
+        max-width: 80px;
+        padding-right: 0;
+    }
+
+    .sidebar__compose {
+        min-width: 50px !important;
+        max-width: 50px !important;
+        height: 50px !important;
+        min-height: 50px !important;
+        padding: 0 !important;
+        margin: 15px auto 20px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border-radius: 50% !important;
+        background: linear-gradient(135deg, #fff, #f8f9fa) !important;
+    }
+    
+    .sidebar__compose .MuiSvgIcon-root {
+        margin: 0 !important;
+        font-size: 24px !important;
+    }
+
+    .sidebar__compose span {
+        display: none;
+    }
+    
+    .sidebar__compose:hover .MuiSvgIcon-root {
+        transform: rotate(90deg) !important;
+    }
+    
+    .sidebar__footer {
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .sidebar-footerIcons > .MuiIconButton-root{
+       padding: 6px !important;
+    }
+
+    .sidebar__compose {
+        margin: 10px auto 15px !important;
+        height: 45px !important;
+        min-height: 45px !important;
+        min-width: 45px !important;
+        max-width: 45px !important;
+        box-shadow: 0 2px 5px rgba(60, 64, 67, 0.2) !important;
+    }
+    
+    .sidebar__compose:active {
+        transform: scale(0.95) !important;
+    }
+}

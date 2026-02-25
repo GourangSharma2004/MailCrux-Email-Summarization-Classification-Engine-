@@ -1,0 +1,116 @@
+.sidebarOption {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 12px 0 26px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    color: #202124;
+    transition: all 0.2s ease;
+    margin: 2px 0;
+    position: relative;
+}
+
+.sidebarOption:hover {
+    background-color: #f1f3f4;
+}
+
+.sidebarOption--active {
+    background-color: #e8f0fe;
+}
+
+.sidebarOption--active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #1A73E8;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.sidebarOption > .MuiSvgIcon-root {
+    padding: 5px;
+    color: #5f6368;
+    font-size: 20px;
+    width: 26px;
+    height: 26px;
+    transition: color 0.2s ease;
+}
+
+.sidebarOption:hover > .MuiSvgIcon-root {
+    color: #202124;
+}
+
+.sidebarOption--active > .MuiSvgIcon-root {
+    color: #1A73E8;
+}
+
+.sidebarOption > h3 {
+    flex: 1;
+    margin-left: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    transition: color 0.2s ease;
+}
+
+.sidebarOption > p {
+    display: none;
+    font-weight: 500;
+    font-size: 12px;
+    color: #5f6368;
+    padding-right: 8px;
+    transition: color 0.2s ease;
+}
+
+.sidebarOption--active > p {
+    display: inline !important;
+    font-weight: 700;
+    color: #1A73E8;
+}
+
+.sidebarOption:hover > p {
+    display: inline;
+}
+
+.sidebarOption--active > h3 {
+    color: #1A73E8;
+    font-weight: 700 !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebarOption {
+        padding: 0 10px;
+        justify-content: center;
+    }
+    
+    .sidebarOption > h3 {
+        display: none;
+    }
+    
+    .sidebarOption > p {
+        display: none !important;
+    }
+    
+    .sidebarOption--active::before {
+        width: 2px;
+    }
+    
+    .sidebarOption > .MuiSvgIcon-root {
+        padding: 5px;
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .sidebarOption {
+        height: 36px;
+        padding: 0 8px;
+    }
+}

@@ -1,0 +1,234 @@
+.notepad-dialog {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.notepad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.notepad-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.notepad-content {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+
+.notes-sidebar {
+    width: 300px;
+    border-right: 1px solid #e0e0e0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.notes-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sidebar-controls {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.search-bar {
+    margin-bottom: 10px;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.note-editor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.note-toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.color-option {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.color-option.selected {
+    border-color: #1976d2;
+}
+
+.note-item {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.note-item:hover {
+    background-color: #f5f5f5;
+}
+
+.note-item.selected {
+    background-color: #e3f2fd;
+}
+
+.note-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.note-item-title {
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.note-item-date {
+    font-size: 0.8rem;
+    color: #757575;
+}
+
+.note-item-preview {
+    font-size: 0.9rem;
+    color: #757575;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.pinned-notes-section {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section-title {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #757575;
+    background-color: #f5f5f5;
+}
+
+.tag-chip {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.categories-menu {
+    margin-top: 10px;
+}
+
+/* Dark Mode Styling */
+[data-theme='dark'] .notepad-dialog {
+    background-color: var(--background-paper);
+    color: var(--text-primary);
+}
+
+[data-theme='dark'] .notepad-header {
+    border-bottom: 1px solid var(--divider);
+}
+
+[data-theme='dark'] .notes-sidebar {
+    border-right: 1px solid var(--divider);
+    background-color: var(--background-default);
+}
+
+[data-theme='dark'] .sidebar-controls {
+    border-bottom: 1px solid var(--divider);
+}
+
+[data-theme='dark'] .note-item {
+    border-bottom: 1px solid var(--divider);
+}
+
+[data-theme='dark'] .note-item:hover {
+    background-color: var(--hover-background);
+}
+
+[data-theme='dark'] .note-item.selected {
+    background-color: var(--selected-background);
+}
+
+[data-theme='dark'] .note-item-date {
+    color: var(--text-secondary);
+}
+
+[data-theme='dark'] .note-item-preview {
+    color: var(--text-secondary);
+}
+
+[data-theme='dark'] .pinned-notes-section {
+    border-bottom: 1px solid var(--divider);
+}
+
+[data-theme='dark'] .section-title {
+    color: var(--text-secondary);
+    background-color: var(--background-light);
+}
+
+[data-theme='dark'] .MuiTextField-root,
+[data-theme='dark'] .MuiOutlinedInput-root {
+    color: var(--text-primary);
+}
+
+[data-theme='dark'] .MuiInputLabel-root {
+    color: var(--text-secondary);
+}
+
+[data-theme='dark'] .MuiIconButton-root {
+    color: var(--icon-color);
+}
+
+@media (max-width: 768px) {
+    .notes-sidebar {
+        width: 250px;
+    }
+    
+    .note-toolbar {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .notepad-content {
+        flex-direction: column;
+    }
+    
+    .notes-sidebar {
+        width: 100%;
+        height: 200px;
+        border-right: none;
+        border-bottom: 1px solid var(--divider);
+    }
+} 

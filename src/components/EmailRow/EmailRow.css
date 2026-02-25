@@ -1,0 +1,112 @@
+.emailRow {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #f5f5f5;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.15s ease;
+    padding: 0 10px;
+}
+
+.emailRow:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.emailRow__important {
+    color: #e8ab02 !important;
+}
+
+.emailRow__selected {
+    background-color: #f0f7ff;
+    border-left: 3px solid #1a73e8;
+}
+
+.emailRow__options {
+    display: flex;
+    align-items: center;
+}
+
+.emailRow__message {
+    display: flex; 
+    flex: 0.8;
+    align-items: center;
+    font-size: 13px;
+}
+
+.emailRow__message > h4 {
+    width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: 500;
+    color: #202124;
+    margin: 0;
+}
+
+.emailRow__message > p {
+    display: flex;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #5f6368;
+    margin: 0 5px;
+}
+
+.emailRow__title {
+    font-size: 13px;
+    flex: 0.3;
+    font-weight: 500;
+    color: #202124;
+}
+
+.emailRow__time {
+    padding-right: 15px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #5f6368;
+    min-width: 60px;
+    text-align: right;
+}
+
+.emailRow__description {
+    color: #5f6368;
+    font-weight: 400;
+}
+
+.emailRow__unread h4,
+.emailRow__unread .emailRow__title {
+    font-weight: 600;
+    color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+    .emailRow__title {
+        font-size: 12px;
+    }
+    
+    .emailRow__message > h4 {
+        width: 200px;
+        font-size: 12px;
+    }
+    
+    .emailRow__time {
+        min-width: 40px;
+        font-size: 10px;
+    }
+}
+
+/* Add styling for unread emails */
+.emailRow__unread {
+    background-color: #f6f8fc;
+    }
+
+.emailRow__unread .emailRow__title,
+.emailRow__unread .emailRow__message > h4 {
+    font-weight: bold;
+    color: #202124;
+}
